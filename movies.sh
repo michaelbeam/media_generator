@@ -12,7 +12,7 @@ cat << _header_
 <body>
 _header_
 
-ls $1 | while read $a; do
+ls $1 | while read a; do
 	mdir="$1/$a"
 	echo '<a href="'$mdir'"><img src="'$mdir'/title.png" width="400" height="230" /></a>'
 	
