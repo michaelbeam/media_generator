@@ -4,6 +4,7 @@ function usage {
 	echo "Usage: $0 MEDIAPATH" >&2
 }
 
+# check for the target directory
 if [[ $# -eq 0 ]]; then
 	usage 
 	exit
