@@ -1,5 +1,14 @@
 #!/bin/bash
 
+function usage {
+	echo "Usage: $0 MEDIAPATH" >&2
+}
+
+if [[ $# -eq 0 ]]; then
+	usage 
+	exit
+fi
+
 cat << _header_
 <!doctype html>
 <html>
