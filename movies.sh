@@ -21,12 +21,13 @@ cat << _header_
 <body>
 _header_
 
-ls $1 | while read a; do
-	mdir="$1/$a"
-	echo '<a href="'$mdir'"><img src="'$mdir'/title.png" width="400" height="230" /></a>'
+path=$1
+cd $path
+ls | while read a; do
+	echo '<a href="'$path/$a'"><img src="'$path/$a'/title.png" width="400" height="230" /></a>'
 	
-	ls $mdir | while read b; do
-		echo '<a href="'$mdir/$b'">'$b'</a>'
+	ls $a | while read b; do
+		echo '<a href="'$path/$a/$b'">'$b'</a>'
 	done
 	
 	echo "<br />"
